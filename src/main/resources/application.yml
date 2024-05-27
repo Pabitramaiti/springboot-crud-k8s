@@ -1,0 +1,24 @@
+#spring.application.name: SPRINGBOOT-MYSQL-K8S Test
+spring:
+  datasource:
+    #driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://${DB_HOST}/${DB_NAME}?useSSL=false
+    #url: jdbc:mysql://localhost:3306/javatechie?useSSL=false
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    #url: jdbc:mysql://mysql:3306/javatechie?useSSL=false
+    #username: pabitra
+    #password: Welcome@01
+    #hikari:
+      #initialization-fail-timeout: 0
+  jpa:
+    #database-platform: org.hibernate.dialect.MySQL8Dialect
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      #naming:
+        #physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+  application:
+    name: SPRINGBOOT-MYSQL-K8S
